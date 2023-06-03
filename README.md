@@ -1,134 +1,93 @@
-[![Logo](./.github/assets/logo_open_source.png)](#)
+# 作者
+其原作者为Andrei1058，而后此版本由Starry_Killer单独完成修改，请勿二次分发该源码
+# 说明
+BedWars是一款迷你游戏，你必须保护自己的床并摧毁其他人。
+一旦你的床被毁，你就无法重生。
+# 系统要求
+此软件在[Spigot]上运行(https://www.spigotmc.org/)以及NMS。
+不支持未编译NMS代码的Spigot fork。
+官方支持的服务器是[龙头](https://www.spigotmc.org/)和[纸](https://papermc.io/)。
+需要使用Java 11或更新版本。
 
-[![Discord](https://discordapp.com/api/guilds/201345265821679617/widget.png?style=shield)](https://discord.gg/XdJfN2X) [![bStats](https://img.shields.io/bstats/servers/1885)](#)
+内部世界恢复系统基于压缩和解压缩地图，这些地图可以
+如果你在2021年仍在使用HDD，而且你没有一个像样的CPU，那就太重了
+和更快的恢复系统安装[SlimeWorldManager](https://www.spigotmc.org/resources/slimeworldmanager.69974/)或[AdvancedWorldManager](https://www.spigotmc.org/resources/advanced-slimeworldmanager.87209/)。
+BedWars1058会全力以赴。
+# 预先制作的设置和社区插件
+你可以在wiki上找到预先制作的设置和社区插件的列表(https://wiki.andrei1058.dev/docs/BedWars1058/addons)
+# 主要特点
+###### 灵活|运行插件的方式：
+-**SHARED**：可以在同一个龙头实例上的其他迷你游戏之间运行。只能通过命令访问游戏。
+-**MULTIARENA**：将需要一个完整的服务器实例来托管迷你游戏。它将保护大厅世界，游戏可以通过命令、NPC、标志和GUI加入。
+-**BUNGE-LEGACY**：古老的经典蹦极模式，游戏意味着整个服务器实例。加入服务器时，您将被添加到游戏中。竞技场状态将显示为MOTD。
+-**BUNGEE**：一种全新的可伸缩蹦极模式。它可以在同一服务器实例上托管多个竞技场，在需要时克隆并启动新的竞技场，以便其他玩家可以加入。在玩了一定数量的游戏后，服务器可以自动重新启动。这将需要安装
+-**BUNGEE-SINGLE**：一种基于BUNGEE模式的额外拓展模式，结合了LEGACY与BUNGEE的特点，以克隆模式启动，同时，也可以以/server直接加入
+[BedWarsProxy](https://www.spigotmc.org/resources/bedwarsproxy.66642/)在您的大厅服务器上，以便玩家可以加入。当然，在蹦极模式下，您可以运行任意数量的服务器，通常来说，此版本拥有特殊的Proxy插件，您可以通过联系Starry_Killer获得。
+###### 语言|每位玩家的语言系统：
+-每个玩家都可以用他们想要的语言接收消息、全息图、GUI等/bw语言。
+-您可以删除或添加新的语言。
+-团队名称、团队名称、店铺内容等等都可以用您的语言翻译。
+-[开始倒计时]的自定义标题和字幕(https://gitlab.com/andrei1058/BedWars1058/-/wikis/language-configuration#custom-竞技场倒计时的标题子标题）。
+###### 大厅拆除|可选：
+游戏开始后，可以移除地图内的等候大厅。
+###### 竞技场组|自定义：
+-您可以按类型（4v4、50v50）对竞技场进行分组。你可以随心所欲地命名它们。
+-小组可以有自定义的记分牌布局，团队升级，开始项目和自定义生成器设置。
+-你可以按组加入地图：/bw-join-Solo，/bw-gui Solo。
+###### 商店|定制：
+-您可以配置快速购买默认项目。
+-您可以添加或删除类别。
+-你可以在购买时添加新的商店物品或执行命令。
+-永久物品是在你重生后给予的。
+-永久物品可以降级，这将使你每次死亡失去一层。
+-物品可能有重量，所以你不能买比你现在的物品更弱的物品等等。
+-提供特殊物品：臭虫，梦幻卫士，蛋桥，TNT跳跃，直火球和防御塔。
+-快速购买功能是可用的，并在节点之间同步，以及蹦极模式。
+###### 团队升级|自定义：
+-每个竞技场组可能有不同的团队升级。
+-您可以添加或删除类别和内容。
+-你可以制作升级元素：附魔物品，给予药剂效果（当队友/基地/敌人进入岛屿时），你可以编辑生成器设置并更改猝死阶段的龙数量。
+-你可以添加新的陷阱：解除物品（剑、盔甲、弓）的召唤，给予药剂效果（团队/基地/敌人），当敌人进入你的岛屿范围时移除药剂效果并触发命令。
+###### 加入竞技场的方式：
+-竞技场选择器，可以进行配置/bw-gui将显示所有竞技场组，/bw-gui Solo将显示Solo组中的游戏，/bw-gui Solo+4v4将显示Sol和4v4中的游戏。
+-你也可以通过安装公民通过NPC加入游戏。
+-连接标志也可与状态块一起使用。
+-命令也可以使用/bw join random会给你带来最满的竞技场，而/bw join mapName会把你送到给定的竞技场，/bw join-groupName+groupName2会把你带到给定组的地图上。
+###### 竞技场设置|自定义：
+-您可以设置用于标志、GUI等的自定义显示名称。
+-选项设置最小/最大玩家数量和团队规模。
+-切换选项：允许观众，禁用空队伍的发电机，禁用空团队的NPC，禁用内部空投管理，床全息图使用。
+-团队产卵和团队NPC的保护范围。
+-岛屿半径（用于触发陷阱和地图等功能）边界半径。
+-基于Y坐标的虚空瞬杀。
+-你可以创建任意数量的团队。
+-你可以像在《星球大战》游戏中一样允许破坏地图。
+-您可以切换生成器拆分。
+-每个地图的自定义游戏规则。
+-每个团队无限的铁/金/翡翠（这个可以从升级中激活）发电机。
+###### Vip Kick |特权：
+拥有bw.vip权限的玩家可以在开始阶段加入完整的竞技场。这将踢出未经该游戏bw.vip许可的玩家。
+###### 玩家统计信息：
+-我们不提供顶级全息图，但您可以使用ajLeaderboards或使用我们提供的占位符的LeaderHeads。
+-玩家可以使用内部统计GUI查看他们的统计数据，该GUI可以由/bw-stats自定义和访问。
+###### 自定义联接项目：
+-您可以添加和删除加入服务器时（仅在多竞技场上）收到的物品，以及在开始/等待阶段加入游戏或作为观众加入游戏时收到的物品。
+-联接项可以执行命令。
+###### 地图恢复系统：
+-BedWars1058中的默认恢复适配器是基于卸载映射、解压缩备份并再次加载。对于具有廉价硬件的服务器来说，这可能很重。我们建议使用游戏处理器和SSD。
+-为了提高性能，我们添加了对SlimeWorldManager的支持，由于其slime格式，它可以更快地加载地图，同时减少对性能的影响。我们非常鼓励您安装此插件。不需要手动转换。BedWars1058将处理一切。请在此处阅读如何安装。
+-您还可以通过API实现自己的映射适配器。
+-它可能看起来比其他插件更重，因为我们不会简单地跟踪修改过的块。我们需要恢复整个地图，因为服务器所有者可以允许玩家像在《星球大战》游戏中一样销毁地图。发电机、NPC和团队孵化器等区域将受到保护。
+###### 重新加入|功能：
+如果您断开连接，或者离开游戏（可配置），您可以通过命令或再次加入服务器重新加入游戏。这也可以在蹦极可伸缩模式下使用。
+###### TNT跳跃|功能：
+-玩家可以使用可配置的值进行tnt跳跃。
+-库存中有tnt的玩家头上有一个红色粒子（可配置）。
+###### 季节活动：
+-万圣节特别节目。它是根据您的机器时区自动启用的，并将提供酷炫的效果。
 
-As from November 1st 2021 BedWars1058 by Andrei Dascălu becomes open source under GNU GPL 3.0 license. If you are a developer I would really appreciate if you'd come with pull requests instead of making hundreds of forks. Let's make updates available for everyone!
-
-# Description
-BedWars is a mini-game where you have to defend your bed and destroy the others.  
-Once your bed is destroyed, you cannot respawn.
-
-# System requirements
-This software runs on [Spigot](https://www.spigotmc.org/) and NMS.
-Spigot forks without compiled NMS code are not supported.
-Officially supported servers are [spigot](https://www.spigotmc.org/) and [paper](https://papermc.io/).
-It is required to use Java 11 or newer.
-
-The internal world restore system is based on zipping and unzipping maps which can become
-heavy if you are still making use of HDD in 2021, and you do not have a decent CPU, for a better
-and faster restore system install [SlimeWorldManager](https://www.spigotmc.org/resources/slimeworldmanager.69974/) or [AdvancedWorldManager](https://www.spigotmc.org/resources/advanced-slimeworldmanager.87209/).
-BedWars1058 will hook into it and do everything for you.
-
-# Pre-made setups and community addons
-
-You can find a list of pre-made setups and community addons [on the wiki](https://wiki.andrei1058.dev/docs/BedWars1058/addons)
-
-# Main features
-
-###### Flexible | Ways you can run the plugin:
-- **SHARED**: can run among other mini-games on the same spigot instance. Games will only be accessible via commands.
-- **MULTIARENA**: will require an entire server instance for hosting the mini-game. It will protect the lobby world and games can be joined via commands, NPCs, signs and GUIs.
-- **BUNGEE-LEGACY**: the old classic bungee mode where a game means an entire server instance. You'll be added to the game when joining the server. Arena status will be displayed as MOTD.
-- **BUNGEE**: a brand new scalable bungee mode. It can host multiple arenas on the same server instance, clone and start new arenas when needed so other players can join. The server can be automatically restarted after a certain amount of games played. This will require installing [BedWarsProxy](https://www.spigotmc.org/resources/bedwarsproxy.66642/) on your lobby servers so players can join. And of course, you can run as many servers as you want in bungee mode.
-
-###### Language | Per player language system:
-- each player can receive messages, holograms, GUIs etc. in their desired language. /bw lang.
-- you can either remove or add new languages.
-- team names, group names, shop contents and a lot more can be translated in your languages.
-- custom titles and subtitles for [starting countdown](https://gitlab.com/andrei1058/BedWars1058/-/wikis/language-configuration#custom-title-sub-title-for-arena-countdown).
-
-###### Lobby removal | Optional:
-The waiting-lobby inside the map can be removed once the game starts.
-
-###### Arena Groups | Customization:
-- you can group arenas by type (4v4, 50v50). You can name them however you want.
-- groups can have custom scoreboard layouts, team upgrades, start items and custom generator settings.
-- you can join maps by group: /bw join Solo, /bw gui Solo.
-
-###### Shop | Customization:
-- you may configure quick-buy default items.
-- you may add or remove categories.
-- you may add new shop items or execute commands when bought.
-- permanent items are given after you re-spawn.
-- permanent items can be downgradable which will make you lose one tier per death.
-- items can have weight so you can't buy a weaker item than your current one etc.
-- special items available: BedBug, Dream Defender, Egg Bridge, TNT Jump and Straight Fireball.
-- quick buy feature is available and is synced between nodes as well in bungee mode.
-
-###### Team Upgrades | Customization:
-- you may have different team upgrades per arena group.
-- you may either add and remove categories and contents.
-- you may make upgrade elements that: enchant items, give potion effects (to team-mates/ base/ enemies when they enter the island), you can edit generator settings and change the dragons amount for the Sudden Death phase.
-- you may add new traps that: disenchant-items (sword, armor, bow), give potion effects (team/ base/ enemies), remove potion effect when an enemy enters your island range and trigger commands.
-
-###### Ways to join an arena:
-
-- arena selector, which can be configured. /bw gui will display all arena groups while /bw gui Solo will show games from Solo groups and /bw gui Solo+4v4 will show games from Solo and 4v4.
-- you can also join games via NPCs by installing Citizens.
-- join-signs are also available with status block.
-- commands can be used as well. /bw join random will bring you the most filled arena, while /bw join mapName will send you to the given arena and /bw join groupName+groupName2 will bring you on a map from the given groups.
-
-###### Arena Settings | Customization:
-- you can set a custom display name used on signs, GUIs etc.
-- option to set the amount of min/ max players and team size.
-- toggle options for: allowing spectators, disabling generators for empty teams, disabling NPCs for empty teams, disabling internal drops management, bed holograms usage.
-- protection range for team-spawn and team NPCs.
-- island radius (for features like triggering traps and map) border radius.
-- instant kill on void based on Y coordinate.
-- you can create as many teams as you want.
-- you can allow map breaking like on a SkyWars game.
-- you can toggle generator split.
-- custom game rules per map.
-- unlimited iron/ gold / emerald (this one can pe activated from upgrades) generators per team.
-
-###### Vip Kick | Privilege:
-Players with bw.vip permission are able to join full arenas in starting phase. This will kick a player without bw.vip permission from that game.
-
-###### Player Statistics:
-- we do not provide top holograms but you can use ajLeaderboards for that or LeaderHeads using the placeholders we provide.
-- players can see their stats using the internal stats GUI, which can be customized and accessed by /bw stats.
-
-###### Party System:
-- we provide a basic and functional internal party system to play with your friends on the same team or arena.
-- we also support Parties by AlessioDP which could be a better solution if you are a large network.
-
-###### Anti AFK System:
-Inactive players for more than 45 seconds can't pick-up items from generators.
-
-###### Custom Join Items:
-- you can add and remove items that you receive when you join the server (only on multi-arena) and the items you receive when you join a game in starting/ waiting phase or when you join as a spectator.
-- join items can execute commands.
-
-###### Map Restore System:
-- the default restore adapter from BedWars1058 is based on un-loading the map, un-zipping a backup and loading it again. This may be heavy for servers with cheap hardware. We recommend using gaming processors and a SSD.
-- to improve performance we added support for SlimeWorldManager, which loads maps way faster with less performance impact thanks to its slime format. We really encourage you installing this plugin. No manual conversion is required. BedWars1058 will handle everything. Read how to install it here.
-- you can also implement your own map adapter trough the API.
-- it may seem heavy than other plugins because we don't simply keep track of modified blocks. We need to restore the entire map because server owners can allow players to destroy the maps like on a SkyWars game. Regions like generators, NPCs and team spawns will be protected.
-
-###### Re-Join | Feature:
-If you get disconnected, or if you leave a game (configurable) you can re-join it via command or by joining the server again. This is also available in bungee scalable mode.
-
-###### TNT Jump | Feature:
-- players are able to do tnt jump with configurable values.
-- players with tnt in their inventory have a red particle on their head (configurable).
-
-###### Season events:
-- Halloween special. It is enabled automatically based on your machine timezone and will provide cool effects.
-
-# Community servers
-Chosen by hundreds of servers all around the world.  
-[![Fear Games Logo](.github/assets/servers/fear_games.png)](https://feargames.it/)
-[![Gamster Logo](.github/assets/servers/gamster.png)](https://www.gamster.org/)  
-- mc.feargames.it
-- mc.gamster.org
-
-
-# 3rd party libraries
-- [bStats](https://bstats.org/getting-started/include-metrics)
+# 第三方依赖
 - [Sidebar API](https://gitlab.com/andrei1058/sidebar)
 - [Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io)
 - [HikariCP](https://mvnrepository.com/artifact/com.zaxxer/HikariCP)
 - [SLF4J](http://www.slf4j.org/)
-
-# Contact
-[![Discord Server](https://discordapp.com/api/guilds/201345265821679617/widget.png?style=banner3)](https://discord.gg/XdJfN2X)
